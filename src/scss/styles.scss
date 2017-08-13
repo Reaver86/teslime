@@ -1,3 +1,5 @@
+@import "colors";
+
 :root {
     box-sizing: border-box;
     font-size: calc(0.7rem + 0.8vw);
@@ -13,7 +15,7 @@ body {
     margin: 0;
     font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', sans-serif;
     text-align: center;
-    background-color: #e5dfec;
+    background-color: $color-main;
 }
 
 header {
@@ -49,7 +51,6 @@ header {
     text-indent: 0;
     content: url(../img/home.svg);
     width: 3em;
-*/
 }
 
 .menu__toggle {
@@ -143,12 +144,12 @@ header {
     list-style-type: none;
     padding-left: 0;
     margin: 0;
-    border: 2px solid #e5dfec;
+    border: 2px solid $color-main;
     border-top: none;
 }
 
 .menu__dropdown > ul > li + li {
-    border-top: 2px solid #e5dfec;
+    border-top: 2px solid $color-main;
 }
 
 .menu__dropdown > ul > li > a {
@@ -161,8 +162,8 @@ header {
 }
 
 .menu__dropdown > ul > div {
-    border-top: 2px solid #e5dfec;
-    border-bottom: 2px solid #e5dfec;
+    border-top: 2px solid $color-main;
+    border-bottom: 2px solid $color-main;
     font-weight: bold;
 }
 
@@ -194,7 +195,7 @@ header {
     .menu__dropdown > ul > li > a {
         padding: 0.3em;
         text-align: center;
-        border: 2px solid #e5dfec;
+        border: 2px solid $color-main;
     }
 }
 
