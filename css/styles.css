@@ -44,12 +44,12 @@ header {
 
 .menu__home::after {
     position: absolute;
-    font-size: 5.2em;
-    line-height: 0.4;
     top: 0em;
     left: 0;
     text-indent: 0;
-    content: "\2302"
+    content: url(../img/home.svg);
+    width: 3em;
+*/
 }
 
 .menu__toggle {
@@ -144,6 +144,7 @@ header {
     padding-left: 0;
     margin: 0;
     border: 2px solid #e5dfec;
+    border-top: none;
 }
 
 .menu__dropdown > ul > li + li {
