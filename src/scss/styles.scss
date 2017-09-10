@@ -46,7 +46,7 @@ header {
 
 .menu__home::after {
     position: absolute;
-    top: 0em;
+    top: 0;
     left: 0;
     text-indent: 0;
     content: url(../img/home.svg);
@@ -167,7 +167,7 @@ header {
     font-weight: bold;
 }
 
-@media (min-width: 30em) {
+@media (min-width: 865px) {
     .menu__toggle {
         display: none;
     }
@@ -248,6 +248,11 @@ h2 {
 .img_welcome {
     width: 95%;
     margin: 0.5em;
+}
+
+.img_pact {
+  width: 95%;
+  max-width: 500px;
 }
 
 .tile {
