@@ -1,6 +1,8 @@
 import '../scss/styles.scss';
 
 (() => {
+    const headerHeight = document.querySelector("header").clientHeight;
+
     // toggle menu by toggling 'is-open' class to the header
     document.querySelector("#menu__toggle").addEventListener("click", () => {
         closeMenu();
@@ -43,14 +45,13 @@ import '../scss/styles.scss';
         scrollToElement("kontakt");
         closeMenu();
     });
+
+    function scrollToElement(elementName) {
+        window.scrollBy(0, document.getElementById(elementName).getBoundingClientRect().top - headerHeight - 5);
+    }
 })();
 
 function closeMenu() {
     document.querySelector("#menu").classList.toggle("is-open");
     document.querySelector("#header").classList.toggle("header-positioned");
-}
-
-function scrollToElement(elementName) {
-    const headerheight = 90;
-    window.scrollBy(0, document.getElementById(elementName).getBoundingClientRect().top - headerheight);
 }
