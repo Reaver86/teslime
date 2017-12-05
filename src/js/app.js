@@ -21,8 +21,12 @@ import '../scss/styles.scss';
         scrollToElement("augen");
         closeMenu();
     });
-    document.querySelector("#jump-haare").addEventListener("click", () => {
-        scrollToElement("haare");
+    document.querySelector("#jump-haare-wachs").addEventListener("click", () => {
+        scrollToElement("haare_wachs");
+        closeMenu();
+    });
+    document.querySelector("#jump-haare-diode").addEventListener("click", () => {
+        scrollToElement("haare_diode");
         closeMenu();
     });
     document.querySelector("#jump-massagen").addEventListener("click", () => {
