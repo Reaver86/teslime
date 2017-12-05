@@ -45,6 +45,10 @@ import '../scss/styles.scss';
         scrollToElement("fuss");
         closeMenu();
     });
+    document.querySelector("#jump-gutscheine").addEventListener("click", () => {
+        scrollToElement("gutscheine");
+        closeMenu();
+    });
     document.querySelector("#jump-kontakt").addEventListener("click", () => {
         scrollToElement("kontakt");
         closeMenu();
