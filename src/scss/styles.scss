@@ -256,12 +256,13 @@ h2 {
   font-size: 1em;
 
   > p {
-    display: inline-block;
     margin: 0.7em;
+    display: inline-block;
   }
 
   > div {
-    margin-top: 0.7em;
+    margin-bottom: 0.7em;
+    align-self: flex-end;
   }
 
   > p > span {
