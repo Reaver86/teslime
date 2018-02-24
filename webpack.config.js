@@ -7,7 +7,7 @@ module.exports = {
     entry: './src/js/app.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.min.js'
+        filename: 'bundle.min.[chunkhash].js'
     },
     module: {
         rules: [
@@ -58,7 +58,7 @@ module.exports = {
     },
     plugins: [
         new ExtractTextPlugin({
-            filename: 'bundle.min.css'
+            filename: 'bundle.min.[contenthash].css'
         }),
         new HtmlWebpackPlugin({
             template: 'src/index.html'
