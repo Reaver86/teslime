@@ -44,6 +44,7 @@ header {
   text-indent: 5em;
   overflow: hidden;
   cursor: pointer;
+  outline: none;
 }
 
 .menu__home::after {
@@ -68,6 +69,7 @@ header {
   transform: rotate(0deg);
   transition: .5s ease-in-out;
   cursor: pointer;
+  outline: none;
 }
 
 .menu__toggle span {
@@ -165,9 +167,9 @@ main {
   margin: 0 auto;
 }
 
-aside {
+.introduction {
   max-width: 1200px;
-  margin: 10em auto 0;
+  margin: 6em auto 0;
 }
 
 footer {
@@ -208,6 +210,11 @@ h2 {
 }
 
 .img_pact {
+  width: 95%;
+  max-width: 500px;
+}
+
+.img_inside {
   width: 95%;
   max-width: 500px;
 }
@@ -274,39 +281,38 @@ h2 {
   }
 }
 
-.img_inside {
-  width: 95%;
-  max-width: 500px;
+.no-wrap {
+  white-space:nowrap;
 }
 
-.img_dioden_laser {
-  width: 60%;
-  max-width: 350px;
-}
-
-@media (min-width: 613px) {
-  aside {
-    margin-top: 6em;
+@media (min-width: 700px) {
+  main {
+    padding-left: calc(25px + 14em);
+    width: 100%;
   }
-}
 
-@media (min-width: 865px) {
   .menu__toggle {
     display: none;
   }
 
   .menu__dropdown {
+    background-color: #aeafb1;
     display: block;
-    position: static;
+    text-align: left;
+    position: fixed;
+    width: calc(25px + 14em);
+    top: 6em;
+    bottom: 0;
+    text-shadow: initial;
 
     > ul {
-      display: flex;
-      flex-flow: wrap;
       border: 0;
     }
 
-    > ul > li {
-      flex: 1;
+    > ul > div {
+      padding-left: 0.3em;
+      border-top: 1px solid $color-background;
+      border-bottom: 1px solid $color-background;
     }
 
     > ul > li + li {
@@ -314,28 +320,29 @@ h2 {
     }
 
     > ul > li > a {
-      padding: 0.3em;
-      text-align: center;
-      border: 2px solid $color-background;
+      padding: 0.5em;
+      border-top: 1px dotted $color-background;
+      border-bottom: 1px dotted $color-background;
       font-size: 0.8rem;
     }
-
-    > ul > div {
-      display: none;
-    }
   }
 
-  aside {
-    margin-top: 9em;
+  .introduction {
+    margin-top: 6em;
   }
 
-  .mobile {
-    display: none;
+  footer {
+    padding-left: calc(25px + 14em);
+    width: 100%;
   }
 }
 
 @media (min-width: 1219px) {
-  aside {
-    margin-top: 5.5em;
+  .introduction {
+    margin-top: 4em;
+  }
+
+  .menu__dropdown {
+    top: 4em;
   }
 }

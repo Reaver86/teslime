@@ -45,6 +45,14 @@ import '../scss/styles.scss';
         scrollToElement("fuss");
         closeMenu();
     });
+    document.querySelector("#jump-nagelpilz").addEventListener("click", () => {
+        scrollToElement("fuss_nagelpilz");
+        closeMenu();
+    });
+    document.querySelector("#jump-reflexzonen").addEventListener("click", () => {
+        scrollToElement("fuss_reflexzonen");
+        closeMenu();
+    });
     document.querySelector("#jump-gutscheine").addEventListener("click", () => {
         scrollToElement("gutscheine");
         closeMenu();
