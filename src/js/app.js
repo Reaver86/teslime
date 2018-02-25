@@ -69,5 +69,8 @@ import '../scss/styles.scss';
 
 function closeMenu() {
     document.querySelector("#menu").classList.toggle("is-open");
-    document.querySelector("#header").classList.toggle("header-positioned");
+    const vw = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+    if (vw < 700) {
+        document.querySelector("#header").classList.toggle("header-positioned");
+    }
 }
