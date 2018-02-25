@@ -219,6 +219,23 @@ h2 {
   max-width: 500px;
 }
 
+.img_map {
+  width: 95%;
+  max-width: 500px;
+  height: 400px;
+}
+
+.img_diode {
+  width: 120px;
+  float: right;
+  padding-top: 0.5em;
+  padding-right: 0.5em;
+}
+
+.clearfix {
+  clear: right;
+}
+
 .tile {
   border: 2px solid black;
   margin: 0.2em;
