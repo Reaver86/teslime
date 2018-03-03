@@ -35,7 +35,7 @@ module.exports = {
             {
                 test: /\.(jpe?g|png|gif|svg)$/i,
                 loaders: [
-                        'file-loader?hash=sha512&digest=hex&context=src/img&name=img/[hash].[ext]', {
+                        'file-loader?&digest=hex&context=src/img&name=img/[name].[ext]', {
                         loader: 'image-webpack-loader',
                         query: {
                             mozjpeg: {

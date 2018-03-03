@@ -57,10 +57,10 @@ import '../scss/styles.scss';
         scrollToElement("gutscheine");
         closeMenu();
     });
-    document.querySelector("#jump-kontakt").addEventListener("click", () => {
+    document.querySelectorAll("#jump-kontakt").forEach(selector => selector.addEventListener("click", () => {
         scrollToElement("kontakt");
         closeMenu();
-    });
+    }));
 
     function scrollToElement(elementName) {
         window.scrollBy(0, document.getElementById(elementName).getBoundingClientRect().top - headerHeight - 5);

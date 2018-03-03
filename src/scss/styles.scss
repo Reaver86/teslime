@@ -189,6 +189,10 @@ a {
   cursor: pointer;
 }
 
+.underline {
+  text-decoration: underline;
+}
+
 h2 {
   margin-top: 1em;
 }
@@ -300,6 +304,12 @@ h2 {
 
 .no-wrap {
   white-space:nowrap;
+}
+
+.max-width-700 {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 @media (min-width: 612px) {
