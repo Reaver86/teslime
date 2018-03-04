@@ -2,6 +2,7 @@ var path = require('path');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var CleanWebpackPlugin = require('clean-webpack-plugin');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: './src/js/app.js',
@@ -35,7 +36,7 @@ module.exports = {
             {
                 test: /\.(jpe?g|png|gif|svg)$/i,
                 loaders: [
-                        'file-loader?&digest=hex&context=src/img&name=img/[name].[ext]', {
+                        'file-loader?hash=sha512&digest=hex&context=src/img&name=img/[hash].[ext]', {
                         loader: 'image-webpack-loader',
                         query: {
                             mozjpeg: {
@@ -63,6 +64,9 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: 'src/index.html'
         }),
+        new CopyWebpackPlugin([
+            {from: 'src/assets', to: 'assets'}
+        ]),
         new CleanWebpackPlugin(['dist'])
     ]
 };
