@@ -240,6 +240,12 @@ address {
   max-width: 400px;
 }
 
+.img_fußpflege {
+  width: 95%;
+  max-width: 400px;
+  margin-top: 1em;
+}
+
 .clearfix {
   clear: right;
 }
@@ -273,6 +279,10 @@ address {
   text-align: left;
 }
 
+.gesicht > ul > li > span {
+  float: right;
+}
+
 .gesicht > .checklist {
   list-style: circle;
 }
@@ -291,9 +301,9 @@ address {
   display: flex;
   justify-content: space-between;
   font-size: 1em;
+  padding-left: 40px; // same as ul padding
 
   > p {
-    margin: 0.7em;
     display: inline-block;
   }
 
@@ -319,6 +329,12 @@ address {
   width: 100%;
   max-width: 700px;
   margin: 0 auto;
+}
+
+.larger {
+  margin: 0;
+  font-size: 0.9em;
+  font-weight: bold;
 }
 
 @media (min-width: 612px) {
