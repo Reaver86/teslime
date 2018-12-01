@@ -13,57 +13,57 @@ import '../scss/styles.scss';
         window.scrollTo(0, 0);
         document.querySelector("#menu").classList.remove("is-open");
     });
-    document.querySelector("#jump-gesicht").addEventListener("click", () => {
+    document.querySelectorAll("[name='jump-gesicht']").forEach(selector => selector.addEventListener("click", () => {
         scrollToElement("gesicht");
         closeMenu();
-    });
-    document.querySelector("#jump-augen").addEventListener("click", () => {
+    }));
+    document.querySelectorAll("[name='jump-augen']").forEach(selector => selector.addEventListener("click", () => {
         scrollToElement("augen");
         closeMenu();
-    });
-    document.querySelector("#jump-haare-wachs").addEventListener("click", () => {
+    }));
+    document.querySelectorAll("[name='jump-haare-wachs']").forEach(selector => selector.addEventListener("click", () => {
         scrollToElement("haare_wachs");
         closeMenu();
-    });
-    document.querySelector("#jump-haare-diode").addEventListener("click", () => {
+    }));
+    document.querySelectorAll("[name='jump-haare-diode']").forEach(selector => selector.addEventListener("click", () => {
         scrollToElement("haare_diode");
         closeMenu();
-    });
-    document.querySelector("#jump-massagen").addEventListener("click", () => {
+    }));
+    document.querySelectorAll("[name='jump-massagen']").forEach(selector => selector.addEventListener("click", () => {
         scrollToElement("massagen");
         closeMenu();
-    });
-    document.querySelector("#jump-manikuere").addEventListener("click", () => {
+    }));
+    document.querySelectorAll("[name='jump-manikuere']").forEach(selector => selector.addEventListener("click", () => {
         scrollToElement("manikuere");
         closeMenu();
-    });
-    document.querySelector("#jump-shellac").addEventListener("click", () => {
+    }));
+    document.querySelectorAll("[name='jump-shellac']").forEach(selector => selector.addEventListener("click", () => {
         scrollToElement("shellac");
         closeMenu();
-    });
-    document.querySelector("#jump-fuss").addEventListener("click", () => {
+    }));
+    document.querySelectorAll("[name='jump-fuss']").forEach(selector => selector.addEventListener("click", () => {
         scrollToElement("fuss");
         closeMenu();
-    });
-    document.querySelector("#jump-nagelpilz").addEventListener("click", () => {
+    }));
+    document.querySelectorAll("[name='jump-nagelpilz']").forEach(selector => selector.addEventListener("click", () => {
         scrollToElement("fuss_nagelpilz");
         closeMenu();
-    });
-    document.querySelector("#jump-reflexzonen").addEventListener("click", () => {
-        scrollToElement("fuss_reflexzonen");
-        closeMenu();
-    });
-    document.querySelector("#jump-gutscheine").addEventListener("click", () => {
+    }));
+    document.querySelectorAll("[name='jump-gutscheine']").forEach(selector => selector.addEventListener("click", () => {
         scrollToElement("gutscheine");
         closeMenu();
-    });
-    document.querySelectorAll("#jump-kontakt").forEach(selector => selector.addEventListener("click", () => {
+    }));
+    document.querySelectorAll("[name='jump-kontakt']").forEach(selector => selector.addEventListener("click", () => {
         scrollToElement("kontakt");
         closeMenu();
     }));
 
     function scrollToElement(elementName) {
         window.scrollBy(0, document.getElementById(elementName).getBoundingClientRect().top - headerHeight - 5);
+    }
+
+    if ([8, 9, 10, 11, 0, 1].indexOf((new Date()).getMonth()) > -1) {
+        document.querySelector(".img_winterzeit").classList.toggle("show");
     }
 })();
 

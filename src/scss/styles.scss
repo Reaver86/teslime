@@ -228,13 +228,6 @@ address {
   height: 400px;
 }
 
-.img_diode {
-  width: 120px;
-  float: right;
-  padding-top: 0.5em;
-  padding-right: 0.5em;
-}
-
 .img_urlaub {
   width: 95%;
   max-width: 400px;
@@ -244,6 +237,11 @@ address {
   width: 95%;
   max-width: 400px;
   margin-top: 1em;
+}
+
+.img_hotstone {
+  width: 95%;
+  max-width: 350px;
 }
 
 .clearfix {
@@ -335,6 +333,57 @@ address {
   margin: 0;
   font-size: 0.9em;
   font-weight: bold;
+}
+
+.bild-container {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  height: 200px;
+}
+
+.bild-container > .img_diode {
+  max-width: 120px;
+  width: 30%;
+}
+
+.bild-container > .img_sommerbeine {
+  max-width: 130px;
+  width: 30%;
+}
+
+.bild-container > .img_winterzeit {
+  max-width: 300px;
+  width: 30%;
+  display: none;
+}
+
+.bild-container > .show {
+  display: block;
+}
+
+.angebote {
+  background-color: #441d30;
+  color: white;
+  max-width: 500px;
+  width: 95%;
+  margin: 0 auto;
+  text-transform: uppercase;
+  text-align: left;
+  font-size: 1.2rem;
+  padding: 0.2em 0.3em 0.2em 2em;
+}
+
+.angebote > ul {
+  list-style-type: square;
+}
+
+.angebote > ul > li + li {
+  margin-top: 0.3em;
+}
+
+.angebote a {
+  text-decoration: underline;
 }
 
 @media (min-width: 612px) {

@@ -11,7 +11,7 @@
   <header id="header">
     <div class="header-container">
       <h1>Kosmetik und med.&nbsp;Fachfusspflege Teslime&nbsp;Schuster</h1>
-      <small>(ärztlich geprüfte Kosmetikerin und med.&nbsp;Fachfusspflegerin)</small>
+      <small>ärztlich geprüfte Kosmetikerin und med.&nbsp;Fachfusspflegerin</small>
     </div>
 
     <nav class="menu" id="menu">
@@ -29,19 +29,19 @@
       <div class="menu__dropdown">
         <ul>
           <div>Bereich Kosmetik</div>
-          <li><a id="jump-gesicht">Gesichtsbehandlungen</a></li>
-          <li><a id="jump-augen">Augen</a></li>
-          <li><a id="jump-haare-wachs">Haarentfernung&nbsp;mit&nbsp;Wachs</a></li>
-          <li><a id="jump-haare-diode">dauerhafte Haarentfernung mit <span class="no-wrap">Dioden-Laser</span></a></li>
-          <li><a id="jump-massagen">Massagen</a></li>
-          <li><a id="jump-manikuere">Maniküre</a></li>
-          <li><a id="jump-shellac">Shellac</a></li>
+          <li><a name="jump-gesicht">Gesichtsbehandlungen</a></li>
+          <li><a name="jump-augen">Augen</a></li>
+          <li><a name="jump-haare-wachs">Haarentfernung&nbsp;mit&nbsp;Wachs</a></li>
+          <li><a name="jump-haare-diode">dauerhafte Haarentfernung mit <span class="no-wrap">Dioden-Laser</span></a></li>
+          <li><a name="jump-massagen">Massagen</a></li>
+          <li><a name="jump-manikuere">Maniküre</a></li>
+          <li><a name="jump-shellac">Shellac</a></li>
           <div>Bereich Fusspflege</div>
-          <li><a id="jump-fuss">med.&nbsp;Fachfusspflege</a></li>
-          <li><a id="jump-nagelpilz">Nagelpilz-Behandlung/ Nagelkorrektur&nbsp;mit&nbsp;Spangen/ Zusatzleistungen</a></li>
+          <li><a name="jump-fuss">med.&nbsp;Fachfusspflege</a></li>
+          <li><a name="jump-nagelpilz">Nagelpilz-Behandlung/ Nagelkorrektur&nbsp;mit&nbsp;Spangen/ Zusatzleistungen</a></li>
           <div>Sonstiges</div>
-          <li><a id="jump-gutscheine">Geschenk-Gutscheine</a></li>
-          <li><a id="jump-kontakt">Kontakt</a></li>
+          <li><a name="jump-gutscheine">Geschenk-Gutscheine</a></li>
+          <li><a name="jump-kontakt">Kontakt</a></li>
         </ul>
       </div>
     </nav>
@@ -54,6 +54,22 @@
       <p class="welcome">Herzlich Willkommen!</p>
 
       <img class="img_welcome" src="img/teslime_welcome.jpg" alt="Teslime im Kosmetikstudio">
+
+      <div class="angebote">
+        <ul>
+          <li><a name="jump-gesicht">Kosmetik</a></li>
+          <li><a name="jump-manikuere">Maniküre</a></li>
+          <li><a name="jump-massagen">Massagen</a></li>
+          <li>
+            <a name="jump-haare-wachs">
+              Haarentfernung
+              <br>
+              <small><i>Laser oder Wachs</i></small>
+            </a>
+          </li>
+          <li><a name="jump-fuss">Fachfusspflege</a></li>
+        </ul>
+      </div>
 
       <p class="side-padding">
         Hier finden Sie meine Angebote.<br>
@@ -95,6 +111,12 @@
         <h4>Die Komplettlösung</h4>
         <div class="duration">ca.&nbsp;90&nbsp;min</div>
         <div>68,00&nbsp;€</div>
+
+        <br>
+        <img src="img/gesichtsbehandlung1.png" alt="Gesichtsbehandlung Beispiel 1">
+        <img src="img/gesichtsbehandlung2.png" alt="Gesichtsbehandlung Beispiel 2">
+        <img src="img/gesichtsbehandlung3.png" alt="Gesichtsbehandlung Beispiel 3">
+
         <p>
           Hals-/Gesicht-und Dekolletébehandlung mit individuell auf Ihre Haut abgestimmten Spezialprodukten,
           inkl. Wirkstoffampulle und Augenpackung/-maske.
@@ -360,10 +382,15 @@
         <span id="haare_diode"></span>
 
         <h3>dauerhafte Haarentfernung<br> mit Dioden-Laser</h3>
-        <img class="img_diode" src="img/dioderm_laser.jpg" alt="Bild von Dioden-Laser">
-        <br>
-        <p>Nahezu schmerzfrei,<br>im Normalfall sind 4-8 Behandlungen notwendig, alle 4-6 Wochen</p>
+        <p>Nahezu schmerzfrei.<br>Im Normalfall sind 4-8 Behandlungen notwendig, alle 4-6 Wochen.</p>
 
+        <div class="bild-container">
+          <img class="img_diode" src="img/laser_dioderm.jpg" alt="Dioden-Laser">
+          <img class="img_sommerbeine" src="img/laser_sommerbeine.jpg" alt="Sommerbeine">
+          <img class="img_winterzeit" src="img/laser_winterzeit.png" alt="Winterzeit ist Laserzeit">
+        </div>
+
+        <br>
 
         <h3 class="clearfix">Einzelbehandlungen</h3>
         <div class="item">
@@ -467,6 +494,16 @@
         </div>
 
         <br>
+        <h3>Der Wachstumskreislauf des Haares (Haarzyklus)</h3>
+        <h5>Trotz modernster Technik sind mehrere Behandlungen nötig???</h5>
+        <p>
+          Je nach Körperregion befinden sich <strong>20-30%</strong> der Haare in der <strong>Anagenphase</strong> die mit der <strong>Papille</strong> verbunden sind und nur diese kann der <strong>LASER</strong> entfernen.
+          Beim nächsten Termin sind andere Haare in dieser Phase, dann werden auch diese entfernt. Daher sind mehrere Termine nötig.
+        </p>
+
+        <img class="img_welcome" src="img/laser_erklaerung.jpg" alt="Haut Querschnitt">
+
+        <br>
         <div class="gesicht">
           <h3>Verhalten vor und nach der LASER-Behandlung</h3>
           <ul class="checklist">
@@ -490,6 +527,8 @@
       <div class="tile">
 
         <h3>Klassisch/Wellness</h3>
+
+        <img class="img_hotstone" src="img/hot-stone-massage.png" alt="Massage Beispiel">
 
         <p>
           Wirkung: Entspannung der Muskulatur, lokale Verbesserung der
