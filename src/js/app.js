@@ -15,47 +15,47 @@ import '../scss/styles.scss';
     });
     document.querySelectorAll("[name='jump-gesicht']").forEach(selector => selector.addEventListener("click", () => {
         scrollToElement("gesicht");
-        closeMenu();
+        document.querySelector("#menu").classList.remove("is-open");
     }));
     document.querySelectorAll("[name='jump-augen']").forEach(selector => selector.addEventListener("click", () => {
         scrollToElement("augen");
-        closeMenu();
+        document.querySelector("#menu").classList.remove("is-open");
     }));
     document.querySelectorAll("[name='jump-haare-wachs']").forEach(selector => selector.addEventListener("click", () => {
         scrollToElement("haare_wachs");
-        closeMenu();
+        document.querySelector("#menu").classList.remove("is-open");
     }));
     document.querySelectorAll("[name='jump-haare-diode']").forEach(selector => selector.addEventListener("click", () => {
         scrollToElement("haare_diode");
-        closeMenu();
+        document.querySelector("#menu").classList.remove("is-open");
     }));
     document.querySelectorAll("[name='jump-massagen']").forEach(selector => selector.addEventListener("click", () => {
         scrollToElement("massagen");
-        closeMenu();
+        document.querySelector("#menu").classList.remove("is-open");
     }));
     document.querySelectorAll("[name='jump-manikuere']").forEach(selector => selector.addEventListener("click", () => {
         scrollToElement("manikuere");
-        closeMenu();
+        document.querySelector("#menu").classList.remove("is-open");
     }));
     document.querySelectorAll("[name='jump-shellac']").forEach(selector => selector.addEventListener("click", () => {
         scrollToElement("shellac");
-        closeMenu();
+        document.querySelector("#menu").classList.remove("is-open");
     }));
     document.querySelectorAll("[name='jump-fuss']").forEach(selector => selector.addEventListener("click", () => {
         scrollToElement("fuss");
-        closeMenu();
+        document.querySelector("#menu").classList.remove("is-open");
     }));
     document.querySelectorAll("[name='jump-nagelpilz']").forEach(selector => selector.addEventListener("click", () => {
         scrollToElement("fuss_nagelpilz");
-        closeMenu();
+        document.querySelector("#menu").classList.remove("is-open");
     }));
     document.querySelectorAll("[name='jump-gutscheine']").forEach(selector => selector.addEventListener("click", () => {
         scrollToElement("gutscheine");
-        closeMenu();
+        document.querySelector("#menu").classList.remove("is-open");
     }));
     document.querySelectorAll("[name='jump-kontakt']").forEach(selector => selector.addEventListener("click", () => {
         scrollToElement("kontakt");
-        closeMenu();
+        document.querySelector("#menu").classList.remove("is-open");
     }));
 
     function scrollToElement(elementName) {
