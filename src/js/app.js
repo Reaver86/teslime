@@ -58,19 +58,19 @@ import '../scss/styles.scss';
         document.querySelector("#menu").classList.remove("is-open");
     }));
 
-    function scrollToElement(elementName) {
+    const scrollToElement = (elementName) => {
         window.scrollBy(0, document.getElementById(elementName).getBoundingClientRect().top - headerHeight - 5);
-    }
+    };
 
     if ([8, 9, 10, 11, 0, 1].indexOf((new Date()).getMonth()) > -1) {
         document.querySelector(".img_winterzeit").classList.toggle("show");
     }
 })();
 
-function closeMenu() {
+const closeMenu = () => {
     document.querySelector("#menu").classList.toggle("is-open");
     const vw = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
     if (vw < 700) {
         document.querySelector("#header").classList.toggle("header-positioned");
     }
-}
+};
