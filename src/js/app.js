@@ -62,7 +62,7 @@ import '../scss/styles.scss';
         window.scrollBy(0, document.getElementById(elementName).getBoundingClientRect().top - headerHeight - 5);
     };
 
-    if ([8, 9, 10, 11, 0, 1].indexOf((new Date()).getMonth()) > -1) {
+    if ([7, 8, 9, 10, 11, 0, 1].indexOf((new Date()).getMonth()) > -1) {
         document.querySelector(".img_winterzeit").classList.toggle("show");
     }
 })();
