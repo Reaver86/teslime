@@ -250,6 +250,17 @@ address {
   margin: 10px 0;
 }
 
+.img_wimpernwelle {
+  width: 95%;
+  max-width: 1000px;
+  margin-top: 10px;
+}
+
+.img_instagram {
+  width: 20px;
+  margin-right: 5px;
+}
+
 .clearfix {
   clear: right;
 }
@@ -339,6 +350,12 @@ address {
   margin: 0;
   font-size: 0.9em;
   font-weight: bold;
+}
+
+.img_laser1 {
+  margin-bottom: 20px;
+  width: 95%;
+  max-width: 400px;
 }
 
 .bild-container {
@@ -481,6 +498,7 @@ a.stellenanzeige {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: 1.1em;
 
     & > p {
       margin: 1em 0;
@@ -489,5 +507,37 @@ a.stellenanzeige {
     & > img {
       max-width: 100%;
     }
+
+    & > .corona-image {
+      margin-bottom: 10px;
+    }
+
+    & > .laughing-image {
+      width: 350px;
+    }
+
+    & > .big-text {
+      font-size: 1.5rem;
+    }
+
+    & span {
+      color: red;
+    }
+
+    & > small {
+      font-size: .8rem;
+    }
+  }
+}
+
+.weihnachten {
+  background-color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  display: inline-block;
+
+  & > img {
+    max-width: 100%;
   }
 }
