@@ -2,6 +2,7 @@ import '../scss/styles.scss';
 
 (() => {
     const headerHeight = document.querySelector("header").clientHeight;
+    document.documentElement.style.setProperty('--header-height', headerHeight + 'px');
 
     // toggle menu by toggling 'is-open' class to the header
     document.querySelector("#menu__toggle").addEventListener("click", () => {
@@ -13,6 +14,10 @@ import '../scss/styles.scss';
         window.scrollTo(0, 0);
         document.querySelector("#menu").classList.remove("is-open");
     });
+    document.querySelectorAll("[name='jump-hautanalyse']").forEach(selector => selector.addEventListener("click", () => {
+        scrollToElement("hautanalyse");
+        document.querySelector("#menu").classList.remove("is-open");
+    }));
     document.querySelectorAll("[name='jump-gesicht']").forEach(selector => selector.addEventListener("click", () => {
         scrollToElement("gesicht");
         document.querySelector("#menu").classList.remove("is-open");
@@ -27,6 +32,10 @@ import '../scss/styles.scss';
     }));
     document.querySelectorAll("[name='jump-haare-diode']").forEach(selector => selector.addEventListener("click", () => {
         scrollToElement("haare_diode");
+        document.querySelector("#menu").classList.remove("is-open");
+    }));
+    document.querySelectorAll("[name='jump-microneedling']").forEach(selector => selector.addEventListener("click", () => {
+        scrollToElement("microneedling");
         document.querySelector("#menu").classList.remove("is-open");
     }));
     document.querySelectorAll("[name='jump-massagen']").forEach(selector => selector.addEventListener("click", () => {
@@ -47,6 +56,10 @@ import '../scss/styles.scss';
     }));
     document.querySelectorAll("[name='jump-nagelpilz']").forEach(selector => selector.addEventListener("click", () => {
         scrollToElement("fuss_nagelpilz");
+        document.querySelector("#menu").classList.remove("is-open");
+    }));
+    document.querySelectorAll("[name='jump-eingewachsen']").forEach(selector => selector.addEventListener("click", () => {
+        scrollToElement("fuss_eingewachsen");
         document.querySelector("#menu").classList.remove("is-open");
     }));
     document.querySelectorAll("[name='jump-gutscheine']").forEach(selector => selector.addEventListener("click", () => {

@@ -34,9 +34,9 @@ module.exports = {
                 use: ['html-loader']
             },
             {
-                test: /\.(jpe?g|png|gif|svg)$/i,
+                test: /\.(jpe?g|png|gif|svg|webp)$/i,
                 loaders: [
-                        'file-loader?hash=sha512&digest=hex&context=src/img&name=img/[hash].[ext]', {
+                        'file-loader?hash=sha512&digest=hex&context=src/img&name=img/[name].[ext]', {
                         loader: 'image-webpack-loader',
                         query: {
                             mozjpeg: {
@@ -51,6 +51,9 @@ module.exports = {
                             pngquant: {
                                 quality: '75-90',
                                 speed: 3,
+                            },
+                            webp: {
+                                quality: 75
                             }
                         }
                     }]
