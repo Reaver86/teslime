@@ -27,6 +27,10 @@ header {
   left: 0;
   right: 0;
   z-index: 1;
+
+  address {
+    font-size: .8rem;
+  }
 }
 
 .menu {
@@ -114,7 +118,7 @@ header {
 
 .menu.is-open .menu__toggle span:nth-child(4) {
   top: 0.9em;
-  width: 0%;
+  width: 0;
   left: 50%;
 }
 
@@ -169,7 +173,7 @@ header {
 
 .introduction {
   max-width: 1200px;
-  margin: 10em auto 0;
+  margin: var(--header-height) auto 0;
 }
 
 footer {
@@ -181,8 +185,8 @@ h1, h2, h3, h4 {
   margin: 0;
 }
 
-h5 {
-  margin: 0;
+.sub-heading {
+  font-size: 0.83em;
 }
 
 h1 {
@@ -209,12 +213,6 @@ address {
 .welcome {
   font-size: 1.5em;
   margin: 0.3em;
-}
-
-.img_welcome {
-  max-width: 500px;
-  width: 95%;
-  margin: 0.5em;
 }
 
 .img_pact {
@@ -303,11 +301,11 @@ address {
   float: right;
 }
 
-.checklist {
+ul.checklist {
   list-style: circle;
 }
 
-.checklist-x {
+ul.checklist-x {
   list-style: square;
   text-align: left;
   padding-left: 60px;
@@ -369,6 +367,91 @@ address {
   max-width: 400px;
 }
 
+.img_laser2 {
+  max-width: 500px;
+  width: 95%;
+  margin: 0.5em;
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: repeat(50, 1fr);
+  grid-template-rows: repeat(50, 1fr);
+  max-width: 800px;
+  width: 95%;
+  margin-inline: auto;
+
+  .img_komplettprogramm {
+    grid-column: -1/1;
+    grid-row: -1/1;
+    max-width: 100%;
+  }
+
+  & > *:not(.img_komplettprogramm):hover {
+    background-color: #ede9d5;
+    opacity: 10%;
+  }
+
+  & > *:not(.img_komplettprogramm) {
+    z-index: 1;
+  }
+
+  &__hydra-face {
+    grid-column: 1/span 22;
+    grid-row: 2/span 17;
+  }
+
+  &__microneedling {
+    grid-column: 33 / -1;
+    grid-row: 3 / span 20;
+  }
+
+  &__laser {
+    grid-column: 2 / span 13;
+    grid-row: 21 / span 17;
+  }
+
+  &__hautanalyse {
+    grid-row: 18 / span 21;
+    grid-column: 16 / span 17;
+  }
+
+  &__wimpernlifting {
+    grid-column: 35 / -1;
+    grid-row: 24 / span 11;
+  }
+
+  &__fusspflege {
+    grid-column: 34 / -1;
+    grid-row: 36 / span 4;
+  }
+
+  &__instagram {
+    grid-column: 2 / span 9;
+    grid-row: 41 / span 10;
+  }
+
+  &__facebook {
+    grid-column: 12 / span 9;
+    grid-row: 41 / span 10;
+  }
+
+  &__whatsapp {
+    grid-column: 21 / span 9;
+    grid-row: 41 / span 10;
+  }
+
+  &__website {
+    grid-column: 31 / span 9;
+    grid-row: 41 / span 10;
+  }
+
+  &__google-bewertung {
+    grid-column: 41 / span 9;
+    grid-row: 41 / span 10;
+  }
+}
+
 .bild-container {
   display: flex;
   justify-content: space-around;
@@ -427,6 +510,22 @@ ul.hautanalyse-list {
   }
 }
 
+.google-bewertung-button {
+  text-decoration: none;
+  padding: 5px 20px;
+  color: #fba421;
+  background-color: white;
+  border: 3px solid #fba421;
+  border-radius: 10px;
+  margin-block: 5px;
+  display: inline-block;
+
+  &:hover, &:focus {
+    background-color: #fba421;
+    color: white;
+  }
+}
+
 .image-grid {
   display: grid!important;
   opacity: unset!important;
@@ -440,7 +539,7 @@ ul.hautanalyse-list {
     max-width: 250px;
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
   }
 
   @media(min-width: 495px) {
@@ -475,7 +574,7 @@ ul.hautanalyse-list {
   img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
 
     &:nth-of-type(2) {
       max-width: 300px;
@@ -495,12 +594,6 @@ ul.hautanalyse-list {
   }
 }
 
-@media (min-width: 612px) {
-  .introduction {
-    margin-top: 7em;
-  }
-}
-
 @media (min-width: 700px) {
   main {
     padding-left: calc(25px + 14em);
@@ -517,7 +610,7 @@ ul.hautanalyse-list {
     text-align: left;
     position: fixed;
     width: calc(25px + 14em);
-    top: 6em;
+    top: var(--header-height);
     bottom: 0;
     text-shadow: initial;
 
@@ -544,23 +637,9 @@ ul.hautanalyse-list {
     }
   }
 
-  .introduction {
-    margin-top: 6em;
-  }
-
   footer {
     padding-left: calc(25px + 14em);
     width: 100%;
-  }
-}
-
-@media (min-width: 1219px) {
-  .introduction {
-    margin-top: 4em;
-  }
-
-  .menu__dropdown {
-    top: 4em;
   }
 }
 
