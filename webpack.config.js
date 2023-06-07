@@ -1,75 +1,41 @@
-var path = require('path');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var CleanWebpackPlugin = require('clean-webpack-plugin');
-var CopyWebpackPlugin = require('copy-webpack-plugin');
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-    entry: './src/js/app.js',
+    entry: "./src/index.js",
     output: {
+        filename: 'bundle.min.[chunkhash].js',
         path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.min.[chunkhash].js'
+        publicPath: './',
+        assetModuleFilename: 'img/[name][ext]'
     },
+    plugins: [
+        new HtmlWebpackPlugin({template: './src/index.html'}),
+        new MiniCssExtractPlugin({filename: 'bundle.min.[contenthash].css'}),
+        new CopyWebpackPlugin({patterns:[{from: 'src/assets', to: 'assets'}, {from: 'src/img', to: 'img'}]})
+    ],
     module: {
         rules: [
             {
-                test: /\.js$/,
-                use: [
-                    {
-                        loader: 'babel-loader',
-                        options: {
-                            presets: ['es2015']
-                        }
-                    }
-                ]
-            },
-            {
                 test: /\.scss$/,
-                use: ExtractTextPlugin.extract({
-                    use: ['css-loader', 'sass-loader']
-                })
-            },
-            {
-                test: /\.html$/,
-                use: ['html-loader']
+                use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
             },
             {
                 test: /\.(jpe?g|png|gif|svg|webp)$/i,
-                loaders: [
-                        'file-loader?hash=sha512&digest=hex&context=src/img&name=img/[name].[ext]', {
-                        loader: 'image-webpack-loader',
-                        query: {
-                            mozjpeg: {
-                                progressive: true,
-                            },
-                            gifsicle: {
-                                interlaced: false
-                            },
-                            optipng: {
-                                optimizationLevel: 7
-                            },
-                            pngquant: {
-                                quality: '75-90',
-                                speed: 3,
-                            },
-                            webp: {
-                                quality: 75
-                            }
-                        }
-                    }]
+                type: 'asset/resource'
             }
         ]
     },
-    plugins: [
-        new ExtractTextPlugin({
-            filename: 'bundle.min.[contenthash].css'
-        }),
-        new HtmlWebpackPlugin({
-            template: 'src/index.html'
-        }),
-        new CopyWebpackPlugin([
-            {from: 'src/assets', to: 'assets'}
-        ]),
-        new CleanWebpackPlugin(['dist'])
-    ]
-};
+    optimization: {
+        minimize: true,
+        minimizer: [new CssMinimizerPlugin()]
+    },
+    devtool: 'inline-source-map',
+    devServer: {
+        static: './dist',
+    }
+}

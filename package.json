@@ -4,29 +4,26 @@
   "description": "Homepage of Kosmetik and med. Fachfusspflege Studio Teslime Schuster",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server",
-    "build": "webpack -p"
+    "start": "webpack serve --mode development --open",
+    "build": "webpack --mode production"
   },
   "keywords": [],
   "author": "Alexander Schuster",
   "license": "ISC",
   "devDependencies": {
-    "babel-core": "6.26.0",
-    "babel-loader": "7.1.2",
-    "babel-preset-es2015": "6.24.1",
-    "clean-webpack-plugin": "0.1.18",
-    "copy-webpack-plugin": "4.5.0",
-    "css-loader": "0.28.11",
-    "extract-text-webpack-plugin": "3.0.2",
-    "file-loader": "1.1.9",
-    "html-loader": "0.5.5",
-    "html-webpack-plugin": "2.30.1",
-    "image-webpack-loader": "4.1.0",
-    "node-sass": "^4.10.0",
-    "sass-loader": "7.1.0",
-    "style-loader": "0.23.1",
-    "webpack": "3.11.0",
-    "webpack-dev-server": "2.11.1"
-  },
-  "dependencies": {}
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.8.1",
+    "css-minimizer-webpack-plugin": "^5.0.0",
+    "html-webpack-plugin": "^5.5.1",
+    "inline-source-map": "^0.6.2",
+    "mini-css-extract-plugin": "^2.7.6",
+    "node-sass": "^9.0.0",
+    "sass-loader": "^13.3.1",
+    "style-loader": "^3.3.3",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.85.1",
+    "webpack-cli": "^5.1.3",
+    "webpack-dev-server": "^4.15.0"
+  }
 }

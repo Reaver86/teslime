@@ -1,6 +1,7 @@
-@import "colors";
-
 :root {
+  --color-background: hsla(268, 25%, 90%, 1);
+  --color-tile: hsla(268, 25%, 95%, 1);
+
   box-sizing: border-box;
   font-size: calc(0.7rem + 0.8vw);
 }
@@ -15,7 +16,7 @@ body {
   margin: 0;
   font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', sans-serif;
   text-align: center;
-  background-color: $color-background;
+  background-color: var(--color-background);
 }
 
 header {
@@ -138,12 +139,12 @@ header {
   list-style-type: none;
   padding-left: 0;
   margin: 0;
-  border: 2px solid $color-background;
+  border: 2px solid var(--color-background);
   border-top: none;
 }
 
 .menu__dropdown > ul > li + li {
-  border-top: 2px solid $color-background;
+  border-top: 2px solid var(--color-background);
 }
 
 .menu__dropdown > ul > li > a {
@@ -156,8 +157,8 @@ header {
 }
 
 .menu__dropdown > ul > div {
-  border-top: 2px solid $color-background;
-  border-bottom: 2px solid $color-background;
+  border-top: 2px solid var(--color-background);
+  border-bottom: 2px solid var(--color-background);
   font-weight: bold;
 }
 
@@ -272,7 +273,7 @@ address {
   border: 2px solid black;
   margin: 0.2em;
   padding: 0.2em;
-  background-color: $color-tile;
+  background-color: var(--color-tile);
 }
 
 .side-padding {
@@ -620,8 +621,8 @@ ul.hautanalyse-list {
 
     > ul > div {
       padding-left: 0.3em;
-      border-top: 1px solid $color-background;
-      border-bottom: 1px solid $color-background;
+      border-top: 1px solid var(--color-background);
+      border-bottom: 1px solid var(--color-background);
     }
 
     > ul > li + li {
@@ -631,8 +632,8 @@ ul.hautanalyse-list {
     > ul > li > a {
       padding: 0.5em;
       padding-left: 0.8em;
-      border-top: 1px dotted $color-background;
-      border-bottom: 1px dotted $color-background;
+      border-top: 1px dotted var(--color-background);
+      border-bottom: 1px dotted var(--color-background);
       font-size: 0.8rem;
     }
   }

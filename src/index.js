@@ -1,4 +1,4 @@
-import '../scss/styles.scss';
+import './scss/styles.scss';
 
 (() => {
     const headerHeight = document.querySelector("header").clientHeight;
