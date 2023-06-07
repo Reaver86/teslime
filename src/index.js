@@ -45,6 +45,11 @@ import './scss/styles.scss';
         document.querySelector("#menu").classList.remove("is-open");
         document.querySelector("#header").classList.remove("header-positioned");
     }));
+    document.querySelectorAll("[name='jump-facelifting']").forEach(selector => selector.addEventListener("click", () => {
+        scrollToElement("facelifting");
+        document.querySelector("#menu").classList.remove("is-open");
+        document.querySelector("#header").classList.remove("header-positioned");
+    }));
     document.querySelectorAll("[name='jump-massagen']").forEach(selector => selector.addEventListener("click", () => {
         scrollToElement("massagen");
         document.querySelector("#menu").classList.remove("is-open");
@@ -77,6 +82,11 @@ import './scss/styles.scss';
     }));
     document.querySelectorAll("[name='jump-gutscheine']").forEach(selector => selector.addEventListener("click", () => {
         scrollToElement("gutscheine");
+        document.querySelector("#menu").classList.remove("is-open");
+        document.querySelector("#header").classList.remove("header-positioned");
+    }));
+    document.querySelectorAll("[name='jump-rezensionen']").forEach(selector => selector.addEventListener("click", () => {
+        scrollToElement("rezensionen");
         document.querySelector("#menu").classList.remove("is-open");
         document.querySelector("#header").classList.remove("header-positioned");
     }));

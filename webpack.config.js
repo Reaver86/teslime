@@ -16,7 +16,8 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({template: './src/index.html'}),
         new MiniCssExtractPlugin({filename: 'bundle.min.[contenthash].css'}),
-        new CopyWebpackPlugin({patterns:[{from: 'src/assets', to: 'assets'}, {from: 'src/img', to: 'img'}]})
+        new CopyWebpackPlugin({patterns:[{from: 'src/assets', to: 'assets'}, {from: 'src/img', to: 'img'}]}),
+        new CleanWebpackPlugin()
     ],
     module: {
         rules: [
