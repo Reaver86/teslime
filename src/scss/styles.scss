@@ -411,8 +411,7 @@ ul.checklist-x {
 .topics-grid {
   display: grid;
   grid-template-columns: repeat(50, 1fr);
-  grid-template-rows: repeat(22, 1fr);
-  gap: 1vw;
+  grid-template-rows: repeat(42, 1fr);
   max-width: 800px;
   width: 95%;
   margin-inline: auto;
@@ -423,42 +422,42 @@ ul.checklist-x {
   }
 
   &__willkommen {
-    grid-row: 1 / span 2;
-    grid-column: 26 / -1;
+    grid-row: 1 / span 3;
+    grid-column: 27 / -1;
   }
 
   &__hydra-face {
-    grid-row: 1 / span 11;
+    grid-row: 1 / span 19;
     grid-column: 1 / span 25;
   }
 
   &__microneedling {
-    grid-row: 3 / span 6;
-    grid-column: 26 / -1;
+    grid-row: 4 / span 10;
+    grid-column: 27 / -1;
   }
 
   &__hautanalyse {
-    grid-row:  11 / -1;
+    grid-row:  20 / -1;
     grid-column: 16 / span 15;
   }
 
   &__laser {
-    grid-row: 11 / span 9;
+    grid-row: 20 / span 17;
     grid-column: 1 / span 15;
   }
 
   &__wimpernlifting {
-    grid-row:  9 / span 7;
+    grid-row:  15 / span 15;
     grid-column: 32 / -1;
   }
 
   &__fusspflege {
-    grid-row: 20 / -1;
+    grid-row: 37 / -1;
     grid-column: 1 / span 15;
   }
 
   &__faltenlifting {
-    grid-row: 16 / -1;
+    grid-row: 28 / -1;
     grid-column: 32 / -1;
   }
 }
